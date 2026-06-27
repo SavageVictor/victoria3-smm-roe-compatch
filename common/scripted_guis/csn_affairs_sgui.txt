@@ -1,0 +1,363 @@
+﻿###########################
+
+
+csn_test_sgui = {
+    scope = country
+
+    effect = {
+        var:csn_select_this_mil_affairs_var_fixed = { set_variable = csn_subject_var_54 }
+    }
+}
+
+
+
+
+csn_select_this_mil_affairs_sgui = {
+    scope = country
+    is_shown = {
+        has_variable = csn_select_this_mil_affairs_var
+    }
+    effect = {
+        # 选中标记
+        overlord = {
+            if = {
+                limit = { has_variable_list = csn_mil_affairs_list }
+                every_in_list = {
+                    variable = csn_mil_affairs_list
+                    limit = { has_variable = csn_select_this_mil_affairs_var }
+                    remove_variable = csn_select_this_mil_affairs_var
+                }
+            }
+        }
+        set_variable = csn_select_this_mil_affairs_var
+
+
+        # 选中国家的scope。。。。。。
+        overlord = {
+            if = {
+                limit = { has_variable_list = csn_mil_affairs_list }
+                every_in_list = {
+                    variable = csn_mil_affairs_list
+                    limit = { has_variable = csn_select_this_mil_affairs_var }
+                    save_scope_as = csn_select_this_mil_affairs_scope
+                }
+            }
+            set_variable = {
+                name = csn_select_this_mil_affairs_var_fixed
+                value = scope:csn_select_this_mil_affairs_scope
+            }
+        }
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 成立
+csn_ga_0 = {
+    scope = country
+    is_shown = {
+        not = { has_variable = csn_subject_var_208 }
+        or = {
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_200 } }
+                capital = { csn_state_is_in_africa = yes }
+                any_scope_state = {
+                    csn_state_is_in_africa = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_201 } }
+                capital = { csn_state_is_in_asia = yes }
+                any_scope_state = {
+                    csn_state_is_in_asia = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_202 } }
+                capital = { csn_state_is_in_europe = yes }
+                any_scope_state = {
+                    csn_state_is_in_europe = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_203 } }
+                capital = { csn_state_is_in_islam = yes }
+                any_scope_state = {
+                    csn_state_is_in_islam = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_204 } }
+                capital = { csn_state_is_in_north_america = yes }
+                any_scope_state = {
+                    csn_state_is_in_north_america = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_205 } }
+                capital = { csn_state_is_in_latin_america = yes }
+                any_scope_state = {
+                    csn_state_is_in_latin_america = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_206 } }
+                capital = { csn_state_is_in_india = yes }
+                any_scope_state = {
+                    csn_state_is_in_india = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                any_country = { not = { has_variable = csn_subject_var_207 } }
+                capital = { csn_state_is_in_siberia = yes }
+                any_scope_state = {
+                    csn_state_is_in_siberia = yes
+                    owner = ROOT
+                    count >= 12
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_dragon_isles = yes }
+                any_scope_state = {
+                    csn_state_is_in_dragon_isles = yes
+                    owner = ROOT
+                    count >= 10
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_aritzakarri = yes }
+                any_scope_state = {
+                    csn_state_is_in_aritzakarri = yes
+                    owner = ROOT
+                    count >= 10
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_thaloria = yes }
+                any_scope_state = {
+                    csn_state_is_in_thaloria = yes
+                    owner = ROOT
+                    count >= 10
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_vermillion = yes }
+                any_scope_state = {
+                    csn_state_is_in_vermillion = yes
+                    owner = ROOT
+                    count >= 10
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_rimeroot = yes }
+                any_scope_state = {
+                    csn_state_is_in_rimeroot = yes
+                    owner = ROOT
+                    count >= 10
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_starshimmer = yes }
+                any_scope_state = {
+                    csn_state_is_in_starshimmer = yes
+                    owner = ROOT
+                    count >= 10
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_dark_morass = yes }
+                any_scope_state = {
+                    csn_state_is_in_dark_morass = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_emperors_marbles = yes }
+                any_scope_state = {
+                    csn_state_is_in_emperors_marbles = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_toftir = yes }
+                any_scope_state = {
+                    csn_state_is_in_toftir = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_volcanic = yes }
+                any_scope_state = {
+                    csn_state_is_in_volcanic = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_ruin_diving = yes }
+                any_scope_state = {
+                    csn_state_is_in_ruin_diving = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_rungloam = yes }
+                any_scope_state = {
+                    csn_state_is_in_rungloam = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_wet_process_coffee = yes }
+                any_scope_state = {
+                    csn_state_is_in_wet_process_coffee = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+            and = {
+                capital = { csn_state_is_in_kailando = yes }
+                any_scope_state = {
+                    csn_state_is_in_kailando = yes
+                    owner = ROOT
+                    count >= 8
+                }
+            }
+        }
+    }
+    effect = {
+
+        # 军政事务局
+        set_variable = csn_subject_var_208
+        root.overlord = {
+            add_to_variable_list = {
+                name = csn_mil_affairs_list
+                target = root
+            }
+        }
+
+        # 头衔：最高行政长官
+        if = {
+            limit = { ruler ?= { not = { has_role = csn_subject_ruler_as_regent } } }
+            ruler ?= { add_character_role = csn_subject_ruler_as_regent }
+            csn_clear_ruler_title_var = yes
+            set_variable = csn_ruler_title_var_2
+        }
+
+        # 修正
+
+
+        # 成立时间
+        set_variable = {
+            name = csn_mil_affairs_time_of_est_var
+            value = {
+                value = game_date
+                divide = 365
+                floor = yes
+            }
+        }
+
+        # 存在时间
+        set_variable = {
+            name = csn_mil_affairs_time_of_exist_var
+            value = 0
+        }
+
+        #change_subject_type = subject_type_mil_affairs
+
+    }
+}
+
+# 取消建制
+csn_ga_1 = {
+    scope = country
+    is_shown = {
+        has_variable = csn_subject_var_208
+    }
+    effect = {
+        remove_variable = csn_subject_var_208
+        remove_variable = csn_select_this_mil_affairs_var
+        csn_clear_special_mil_affairs_country_name = yes
+        root.overlord = {
+            remove_list_variable = {
+                name = csn_mil_affairs_list
+                target = root
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 定名
+csn_ga_2 = {
+    scope = country
+    is_shown = {
+        var:csn_select_this_mil_affairs_var_fixed = {
+            has_variable = csn_subject_var_208
+            csn_has_special_mil_affairs_country_name = no
+        }
+    }
+    effect = {
+        var:csn_select_this_mil_affairs_var_fixed = {
+            csn_auto_set_special_mil_affairs_country_name = yes
+        }
+    }
+}
+
+# 撤回定名
+csn_ga_3 = {
+    scope = country
+    is_shown = {
+        var:csn_select_this_mil_affairs_var_fixed = { csn_has_special_mil_affairs_country_name = yes }
+    }
+    effect = {
+        var:csn_select_this_mil_affairs_var_fixed = { csn_clear_special_mil_affairs_country_name = yes }
+    }
+}
