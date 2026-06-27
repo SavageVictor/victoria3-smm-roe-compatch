@@ -1,5 +1,6 @@
 # Subject Management Menu - RoE Compatch: Regional Triggers
-# Replaces vanilla region groupings with RoE's fantasy geography
+# Maps vanilla SMM regional categories to RoE's continent-level geographic regions
+# Based on RoE's common/geographic_regions/roe_geographic_regions.txt
 
 csn_state_is_in_africa = {
     OR = {
@@ -12,6 +13,7 @@ csn_state_is_in_asia = {
         region = sr:region_china
         region = sr:region_east_asia
         region = sr:region_south_east_asia
+        region = sr:region_dornod
     }
 }
 
@@ -19,9 +21,9 @@ csn_state_is_in_europe = {
     OR = {
         region = sr:region_europe
         region = sr:region_noricum
-        region = sr:southwestern_noricum
         region = sr:region_settlers_coast
-        region = sr:settler_coast
+        region = sr:region_askalon_sea
+        region = sr:region_fraesoh
     }
 }
 
@@ -29,7 +31,6 @@ csn_state_is_in_islam = {
     OR = {
         region = sr:region_middle_east
         region = sr:region_chin_desert
-        region = sr:chin_desert
     }
 }
 
@@ -41,17 +42,20 @@ csn_state_is_in_north_america = {
 
 csn_state_is_in_latin_america = {
     OR = {
-        region = sr:region_zalaron
+        region = sr:region_south_america
+        region = sr:region_central_america
         region = sr:region_bay_of_new_fortune
-        region = sr:bay_of_new_fortune
+        region = sr:region_zalaron
         region = sr:region_locari
         region = sr:region_greater_locari
+        region = sr:region_citrus_currents
     }
 }
 
 csn_state_is_in_india = {
     OR = {
         region = sr:region_india
+        region = sr:region_sarpakshetra
     }
 }
 
@@ -59,21 +63,16 @@ csn_state_is_in_siberia = {
     OR = {
         region = sr:region_frontiers
         region = sr:region_everfrost
-        region = sr:east_everfrost
-        region = sr:west_everfrost
-        region = sr:everfrost_coast
         region = sr:region_gavkhan
-        region = sr:gavkhan
         region = sr:region_khus_wastes
         region = sr:region_inner_khus
-        region = sr:old_khus
     }
 }
 
+# RoE-exclusive region categories for SMM
 csn_state_is_in_dragon_isles = {
     OR = {
         region = sr:region_dragon_isles
-        region = sr:west_dragon_isles
     }
 }
 
@@ -81,61 +80,82 @@ csn_state_is_in_aritzakarri = {
     OR = {
         region = sr:region_aritzakarri
         region = sr:region_south_aritzakarri
-        region = sr:west_aritzakarri
     }
 }
 
 csn_state_is_in_thaloria = {
     OR = {
         region = sr:region_thaloria
-        region = sr:thaloria
     }
 }
 
 csn_state_is_in_vermillion = {
     OR = {
         region = sr:region_vermillion_thicket
-        region = sr:vermillion_thicket
     }
 }
 
 csn_state_is_in_rimeroot = {
     OR = {
         region = sr:region_rimeroot
-        region = sr:rimeroot_jungle
     }
 }
 
 csn_state_is_in_starshimmer = {
     OR = {
         region = sr:region_starshimmer
-        region = sr:region_starshimmer_pool
-        region = sr:starshimmer_pool
-        region = sr:shimmering_pool
     }
 }
 
 csn_state_is_in_dark_morass = {
     OR = {
         region = sr:region_dark_morass
-        region = sr:dark_morass
     }
 }
 
 csn_state_is_in_emperors_marbles = {
     OR = {
         region = sr:region_emperors_marbles
-        region = sr:emperors_marbles
     }
 }
 
-csn_state_is_in_citrus_currents = {
+csn_state_is_in_toftir = {
     OR = {
-        region = sr:region_citrus_currents
-        region = sr:citrus_currents
+        region = sr:region_toftir
     }
 }
 
+csn_state_is_in_volcanic = {
+    OR = {
+        region = sr:region_volcanic
+    }
+}
+
+csn_state_is_in_ruin_diving = {
+    OR = {
+        region = sr:region_ruin_diving
+    }
+}
+
+csn_state_is_in_rungloam = {
+    OR = {
+        region = sr:region_rungloam
+    }
+}
+
+csn_state_is_in_wet_process_coffee = {
+    OR = {
+        region = sr:region_wet_process_coffee_region
+    }
+}
+
+csn_state_is_in_kailando = {
+    OR = {
+        region = sr:region_kailando
+    }
+}
+
+# Combined same-region check for SMM's military administration
 csn_state_is_the_same_as_region_cal_trigger = {
     or = {
         and = { csn_state_is_in_africa = yes owner = { capital = { csn_state_is_in_africa = yes } } }
@@ -154,6 +174,11 @@ csn_state_is_the_same_as_region_cal_trigger = {
         and = { csn_state_is_in_starshimmer = yes owner = { capital = { csn_state_is_in_starshimmer = yes } } }
         and = { csn_state_is_in_dark_morass = yes owner = { capital = { csn_state_is_in_dark_morass = yes } } }
         and = { csn_state_is_in_emperors_marbles = yes owner = { capital = { csn_state_is_in_emperors_marbles = yes } } }
-        and = { csn_state_is_in_citrus_currents = yes owner = { capital = { csn_state_is_in_citrus_currents = yes } } }
+        and = { csn_state_is_in_toftir = yes owner = { capital = { csn_state_is_in_toftir = yes } } }
+        and = { csn_state_is_in_volcanic = yes owner = { capital = { csn_state_is_in_volcanic = yes } } }
+        and = { csn_state_is_in_ruin_diving = yes owner = { capital = { csn_state_is_in_ruin_diving = yes } } }
+        and = { csn_state_is_in_rungloam = yes owner = { capital = { csn_state_is_in_rungloam = yes } } }
+        and = { csn_state_is_in_wet_process_coffee = yes owner = { capital = { csn_state_is_in_wet_process_coffee = yes } } }
+        and = { csn_state_is_in_kailando = yes owner = { capital = { csn_state_is_in_kailando = yes } } }
     }
 }
