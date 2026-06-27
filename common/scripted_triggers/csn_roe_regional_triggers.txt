@@ -1,0 +1,159 @@
+# Subject Management Menu - RoE Compatch: Regional Triggers
+# Replaces vanilla region groupings with RoE's fantasy geography
+
+csn_state_is_in_africa = {
+    OR = {
+        region = sr:region_africa
+    }
+}
+
+csn_state_is_in_asia = {
+    OR = {
+        region = sr:region_china
+        region = sr:region_east_asia
+        region = sr:region_south_east_asia
+    }
+}
+
+csn_state_is_in_europe = {
+    OR = {
+        region = sr:region_europe
+        region = sr:region_noricum
+        region = sr:southwestern_noricum
+        region = sr:region_settlers_coast
+        region = sr:settler_coast
+    }
+}
+
+csn_state_is_in_islam = {
+    OR = {
+        region = sr:region_middle_east
+        region = sr:region_chin_desert
+        region = sr:chin_desert
+    }
+}
+
+csn_state_is_in_north_america = {
+    OR = {
+        region = sr:region_north_america
+    }
+}
+
+csn_state_is_in_latin_america = {
+    OR = {
+        region = sr:region_zalaron
+        region = sr:region_bay_of_new_fortune
+        region = sr:bay_of_new_fortune
+        region = sr:region_locari
+        region = sr:region_greater_locari
+    }
+}
+
+csn_state_is_in_india = {
+    OR = {
+        region = sr:region_india
+    }
+}
+
+csn_state_is_in_siberia = {
+    OR = {
+        region = sr:region_frontiers
+        region = sr:region_everfrost
+        region = sr:east_everfrost
+        region = sr:west_everfrost
+        region = sr:everfrost_coast
+        region = sr:region_gavkhan
+        region = sr:gavkhan
+        region = sr:region_khus_wastes
+        region = sr:region_inner_khus
+        region = sr:old_khus
+    }
+}
+
+csn_state_is_in_dragon_isles = {
+    OR = {
+        region = sr:region_dragon_isles
+        region = sr:west_dragon_isles
+    }
+}
+
+csn_state_is_in_aritzakarri = {
+    OR = {
+        region = sr:region_aritzakarri
+        region = sr:region_south_aritzakarri
+        region = sr:west_aritzakarri
+    }
+}
+
+csn_state_is_in_thaloria = {
+    OR = {
+        region = sr:region_thaloria
+        region = sr:thaloria
+    }
+}
+
+csn_state_is_in_vermillion = {
+    OR = {
+        region = sr:region_vermillion_thicket
+        region = sr:vermillion_thicket
+    }
+}
+
+csn_state_is_in_rimeroot = {
+    OR = {
+        region = sr:region_rimeroot
+        region = sr:rimeroot_jungle
+    }
+}
+
+csn_state_is_in_starshimmer = {
+    OR = {
+        region = sr:region_starshimmer
+        region = sr:region_starshimmer_pool
+        region = sr:starshimmer_pool
+        region = sr:shimmering_pool
+    }
+}
+
+csn_state_is_in_dark_morass = {
+    OR = {
+        region = sr:region_dark_morass
+        region = sr:dark_morass
+    }
+}
+
+csn_state_is_in_emperors_marbles = {
+    OR = {
+        region = sr:region_emperors_marbles
+        region = sr:emperors_marbles
+    }
+}
+
+csn_state_is_in_citrus_currents = {
+    OR = {
+        region = sr:region_citrus_currents
+        region = sr:citrus_currents
+    }
+}
+
+csn_state_is_the_same_as_region_cal_trigger = {
+    or = {
+        and = { csn_state_is_in_africa = yes owner = { capital = { csn_state_is_in_africa = yes } } }
+        and = { csn_state_is_in_asia = yes owner = { capital = { csn_state_is_in_asia = yes } } }
+        and = { csn_state_is_in_europe = yes owner = { capital = { csn_state_is_in_europe = yes } } }
+        and = { csn_state_is_in_islam = yes owner = { capital = { csn_state_is_in_islam = yes } } }
+        and = { csn_state_is_in_north_america = yes owner = { capital = { csn_state_is_in_north_america = yes } } }
+        and = { csn_state_is_in_latin_america = yes owner = { capital = { csn_state_is_in_latin_america = yes } } }
+        and = { csn_state_is_in_india = yes owner = { capital = { csn_state_is_in_india = yes } } }
+        and = { csn_state_is_in_siberia = yes owner = { capital = { csn_state_is_in_siberia = yes } } }
+        and = { csn_state_is_in_dragon_isles = yes owner = { capital = { csn_state_is_in_dragon_isles = yes } } }
+        and = { csn_state_is_in_aritzakarri = yes owner = { capital = { csn_state_is_in_aritzakarri = yes } } }
+        and = { csn_state_is_in_thaloria = yes owner = { capital = { csn_state_is_in_thaloria = yes } } }
+        and = { csn_state_is_in_vermillion = yes owner = { capital = { csn_state_is_in_vermillion = yes } } }
+        and = { csn_state_is_in_rimeroot = yes owner = { capital = { csn_state_is_in_rimeroot = yes } } }
+        and = { csn_state_is_in_starshimmer = yes owner = { capital = { csn_state_is_in_starshimmer = yes } } }
+        and = { csn_state_is_in_dark_morass = yes owner = { capital = { csn_state_is_in_dark_morass = yes } } }
+        and = { csn_state_is_in_emperors_marbles = yes owner = { capital = { csn_state_is_in_emperors_marbles = yes } } }
+        and = { csn_state_is_in_citrus_currents = yes owner = { capital = { csn_state_is_in_citrus_currents = yes } } }
+    }
+}

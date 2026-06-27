@@ -1,0 +1,21 @@
+{
+  "name": "Subject Management Menu - RoE Compatch",
+  "id": "compatch.smm-roe",
+  "version": "1.0",
+  "game_id": "victoria3",
+  "supported_game_version": "1.13.*",
+  "short_description": "Compatibility patch: adds Realms of Exether subject types and entities to Subject Management Menu.",
+  "tags": ["compatch", "fix"],
+  "relationships": [
+    {
+      "rel_type": "dependency",
+      "id": "com.gitlab.kevin.solovjov.realms-of-exether",
+      "display_name": "Realms of Exether",
+      "resource_type": "mod",
+      "version": "*"
+    }
+  ],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
+  }
+}

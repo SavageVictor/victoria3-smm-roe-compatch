@@ -1,0 +1,77 @@
+# Subject Management Menu - RoE Compatch: RoE Subject Type Effects
+
+# Add RoE subject types to SMM's subject management
+csn_roe_subject_types = {
+    # Banner subject
+    if = {
+        limit = {
+            has_variable = csn_roe_sel_banner
+        }
+        scope:csn_target_country = {
+            set_subject_type = {
+                subject_type = subject_type_banner
+                who = root
+            }
+        }
+    }
+    # March subject
+    else_if = {
+        limit = {
+            has_variable = csn_roe_sel_march
+        }
+        scope:csn_target_country = {
+            set_subject_type = {
+                subject_type = subject_type_march
+                who = root
+            }
+        }
+    }
+    # Letter of Marque
+    else_if = {
+        limit = {
+            has_variable = csn_roe_sel_letter_of_marque
+        }
+        scope:csn_target_country = {
+            set_subject_type = {
+                subject_type = subject_type_letter_of_marque
+                who = root
+            }
+        }
+    }
+    # Real Union
+    else_if = {
+        limit = {
+            has_variable = csn_roe_sel_real_union
+        }
+        scope:csn_target_country = {
+            set_subject_type = {
+                subject_type = subject_type_real_union
+                who = root
+            }
+        }
+    }
+    # Satrapy
+    else_if = {
+        limit = {
+            has_variable = csn_roe_sel_satrapy
+        }
+        scope:csn_target_country = {
+            set_subject_type = {
+                subject_type = subject_type_satrapy
+                who = root
+            }
+        }
+    }
+    # Subsidiary
+    else_if = {
+        limit = {
+            has_variable = csn_roe_sel_subsidiary
+        }
+        scope:csn_target_country = {
+            set_subject_type = {
+                subject_type = subject_type_subsidiary
+                who = root
+            }
+        }
+    }
+}

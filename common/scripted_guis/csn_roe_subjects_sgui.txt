@@ -1,0 +1,121 @@
+# Subject Management Menu - RoE Compatch: Subject Type GUI Entries
+
+csn_roe_subject_banner = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = csn_roe_sel_banner }
+    }
+    effect = {
+        remove_variable_list = { name = csn_roe_sel_banner name = csn_roe_sel_march name = csn_roe_sel_letter_of_marque name = csn_roe_sel_real_union name = csn_roe_sel_satrapy name = csn_roe_sel_subsidiary }
+        set_variable = csn_roe_sel_banner
+    }
+}
+
+csn_roe_subject_banner_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = csn_roe_sel_banner
+    }
+}
+
+csn_roe_subject_march = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = csn_roe_sel_march }
+    }
+    effect = {
+        remove_variable_list = { name = csn_roe_sel_banner name = csn_roe_sel_march name = csn_roe_sel_letter_of_marque name = csn_roe_sel_real_union name = csn_roe_sel_satrapy name = csn_roe_sel_subsidiary }
+        set_variable = csn_roe_sel_march
+    }
+}
+
+csn_roe_subject_march_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = csn_roe_sel_march
+    }
+}
+
+csn_roe_subject_letter_of_marque = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = csn_roe_sel_letter_of_marque }
+    }
+    effect = {
+        remove_variable_list = { name = csn_roe_sel_banner name = csn_roe_sel_march name = csn_roe_sel_letter_of_marque name = csn_roe_sel_real_union name = csn_roe_sel_satrapy name = csn_roe_sel_subsidiary }
+        set_variable = csn_roe_sel_letter_of_marque
+    }
+}
+
+csn_roe_subject_letter_of_marque_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = csn_roe_sel_letter_of_marque
+    }
+}
+
+csn_roe_subject_real_union = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = csn_roe_sel_real_union }
+    }
+    effect = {
+        remove_variable_list = { name = csn_roe_sel_banner name = csn_roe_sel_march name = csn_roe_sel_letter_of_marque name = csn_roe_sel_real_union name = csn_roe_sel_satrapy name = csn_roe_sel_subsidiary }
+        set_variable = csn_roe_sel_real_union
+    }
+}
+
+csn_roe_subject_real_union_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = csn_roe_sel_real_union
+    }
+}
+
+csn_roe_subject_satrapy = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = csn_roe_sel_satrapy }
+    }
+    effect = {
+        remove_variable_list = { name = csn_roe_sel_banner name = csn_roe_sel_march name = csn_roe_sel_letter_of_marque name = csn_roe_sel_real_union name = csn_roe_sel_satrapy name = csn_roe_sel_subsidiary }
+        set_variable = csn_roe_sel_satrapy
+    }
+}
+
+csn_roe_subject_satrapy_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = csn_roe_sel_satrapy
+    }
+}
+
+csn_roe_subject_subsidiary = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        NOT = { has_variable = csn_roe_sel_subsidiary }
+    }
+    effect = {
+        remove_variable_list = { name = csn_roe_sel_banner name = csn_roe_sel_march name = csn_roe_sel_letter_of_marque name = csn_roe_sel_real_union name = csn_roe_sel_satrapy name = csn_roe_sel_subsidiary }
+        set_variable = csn_roe_sel_subsidiary
+    }
+}
+
+csn_roe_subject_subsidiary_active = {
+    scope = country
+    is_shown = {
+        is_player = yes
+        has_variable = csn_roe_sel_subsidiary
+    }
+}
